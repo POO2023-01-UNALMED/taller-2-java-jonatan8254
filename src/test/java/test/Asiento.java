@@ -4,7 +4,7 @@ public class Asiento {
 	String color;
 	int precio;
 	int registro;
-	void cambiarColor(String color){
+	public void cambiarColor(String color){
 		switch(color){
 		case "rojo": this.color="rojo";
 		break;

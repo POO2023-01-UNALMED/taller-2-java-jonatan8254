@@ -3,13 +3,13 @@ package test;
 public class Auto {
 	String modelo;
 	int precio;
-	Asiento[] asientos;
+	Asiento [] asientos;
 	String marca;
 	Motor motor;
 	int registro;
 	static int cantidadCreados;
 
-	int cantidadAsientos() {
+	public int cantidadAsientos() {
 		int numAsientos=0;
 		for(int i=0;i<asientos.length;i++) {
 			if(asientos[i] != null) {
@@ -19,18 +19,19 @@ public class Auto {
 		return numAsientos;
 	}
 	
-	String verificarIntegridad() {
-		if (registro==motor.registro) {
-			for(int i=0; i<asientos.length; i++) {
-				if (asientos[i] != null) {
-					if(asientos[i].registro != registro) {
+	public String verificarIntegridad() {
+		if (this.registro==motor.registro){
+			for (int i=0; i<asientos.length;i++) {
+				if (asientos[i]!=null) {
+					if (asientos[i].registro!=this.registro) {
 						return "Las piezas no son originales";
 					}
 				}
 			}
-			return "Auto original";
-		}else {
+		} else {
 			return "Las piezas no son originales";
 		}
+		return "Auto original";
 	}
-}
+		
+	}
