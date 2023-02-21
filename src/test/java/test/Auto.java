@@ -1,7 +1,6 @@
 package test;
 
 public class Auto {
-	//atributos
 	String modelo;
 	int precio;
 	Asiento[] asientos;
@@ -9,7 +8,7 @@ public class Auto {
 	Motor motor;
 	int registro;
 	static int cantidadCreados;
-	//metodos
+
 	int cantidadAsientos() {
 		int numAsientos=0;
 		for(int i=0;i<asientos.length;i++) {
